@@ -1,0 +1,34 @@
+.cabecalho{
+    background-color: #fd7454;
+    height: 114px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89px;
+    align-items: center;
+}
+
+.carrossel{
+    display: flex;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 340px;
+    width: 510px;
+    align-items: center;
+    
+}
+
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.img{
+    object-fit: cover;
+    height: 340px;
+    width: 550px;
+}

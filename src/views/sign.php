@@ -23,6 +23,10 @@ session_destroy();
         <div><img src="./img/logo_pequena.jpg" alt=""></div>
         <div><img src="./img/logo_pequena.jpg" alt=""></div>
         <div><img src="./img/logo_pequena.jpg" alt=""></div>
+        <div><img src="./img/logo_pequena.jpg" alt=""></div>
+        <div><img src="./img/logo_pequena.jpg" alt=""></div>
+        <div><img src="./img/logo_pequena.jpg" alt=""></div>
+        <div><img src="./img/logo_pequena.jpg" alt=""></div>
     </div>
     
     <div class="container">

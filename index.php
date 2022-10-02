@@ -19,7 +19,9 @@
             <div class="logo">
                 <img src="src/views/img/logoAtlasFood.jpeg" alt="" class="logo">
             </div>
-            <button class="logar">Entrar</button>
+            <button class="logar">
+                <a href="./src/views/sign.php">Entrar</a>
+            </button>
         </header>
     </div>
 

@@ -12,16 +12,67 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #ef3838 0%, #c10c0c 100%);
+    background: #fd7454;
+    /* background: linear-gradient(to bottom, #fd7454 0%, #fd7454 100%); */
     position: relative;
 }
 
-/* h2 {
-    z-index: 2;
-} */
+.imagens {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.imagens div {
+    position: absolute;
+    display: block;
+}
+
+.imagens div:nth-child(1){
+    left: 20%;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        top: -100px;
+        transform: translateX(20px);
+    }
+    10%{
+        opacity: 0.5;
+        transform: translateX(20px);
+    }
+    20%{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    40%{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    60%{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    80%{
+        opacity: 0.4;
+        transform: translateX(20px);
+    }
+    100%{
+        top: 87%;
+        transform: translate(20px);
+        opacity: 0;
+    }
+}
 
 .container {
     position: absolute;
+    display: block;
+    z-index: 2;
     max-width: 430px;
     width: 100%;
     background: rgb(255, 255, 255);
@@ -148,7 +199,7 @@ body {
 }
 
 .form .button {
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .form .button input{
@@ -161,17 +212,28 @@ body {
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #e64b4b;
+    background-color: #fd7454;
+    /* background-color: #e64b4b; */
     cursor: pointer;
     transition: all 0.5s ease;
 }
 
 .button input:hover {
-    background-color: #c10c0c;
+    background-color: #e64b4b;
+    /* background-color: #c10c0c; */
 
 }
 
 .form .login_cadastro {
     margin-top: 30px;
     text-align: center;
+}
+
+.form .Error-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: #c10c0c;
+    font-weight: bold;
 }

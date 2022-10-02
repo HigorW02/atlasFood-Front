@@ -1,8 +1,7 @@
-const container = document.querySelector('.container'),
-    senhas = document.querySelectorAll('.senha'),
-    icones = document.querySelectorAll('.showHiddenPass'),
-    login_link = document.querySelector('.login_link'),
-    cadastro_link = document.querySelector('.cadastro_link');
+const container = document.querySelector('.container');
+const senhas = document.querySelectorAll('.senha');
+const icones = document.querySelectorAll('.showHiddenPass');
+
 
 
 // Função para mostrar a senha ao apertar no ícone de visualizar senha \\
@@ -43,12 +42,3 @@ function change_form() {
         container.classList.remove("active");
     }
 }
-
-// cadastro_link.addEventListener("click", ( )=>{
-//     container.classList.add("active");
-// });
-// login_link.addEventListener("click", ( )=>{
-//     container.classList.remove("active");
-// });
-
-

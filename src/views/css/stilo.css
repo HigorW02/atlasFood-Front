@@ -1,14 +1,23 @@
 .cabecalho{
     background-color: #fd7454;
     height: 114px;
+    padding: 30px;
+    border-radius: 50px;
+    color: white;
+    
 }
 
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 89px;
+    height: 150px;
     align-items: center;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 
 .carrossel{

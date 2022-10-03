@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="src/views/img/logoAtlasFood.jpeg" type="image/x-icon">
     <title>AtlasFood-Inicio</title>
 
-    <link rel="stylesheet" href="src/views/css/stilo.css">
+    <link rel="stylesheet" href="src/views/css/index.css">
 </head>
 
 <body>
@@ -17,25 +17,24 @@
         <header>
             <h2 class="titulo">AtlasFood</h2>
             <div class="logo">
-                <img src="src/views/img/logoAtlasFood.jpeg" alt="" class="logo">
+                <img src="src/views/img/logoAtlasFood.jpeg" alt="" class="" height="89px" >
             </div>
-            <button class="logar">
-                <a href="./src/views/sign.php">Entrar</a>
-            </button>
+            <a href="src/views/sign.php" class="login"><button>entrar</button></a>
         </header>
     </div>
 
     <hr>
 
     <div class="navBar">
-        <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="src/views/restaurante.html">Restaurantes</a></li>
-            <li><a href="">Sobre nós</a></li>
-        </ul>
+        <div class="navLink">
+            <p><a href="./index.html">Inicio</a></p>
+            <p><a href="src/views/restaurante.html">Restaurantes</a></p>
+            <p><a href="">Sobre nós</a></p>
+        </div>
     </div>
 
     <hr>
+    
     <main class="corpo">
         <div class="carrossel">
             <div class="container" id="img">
@@ -100,7 +99,7 @@
         </a>
     </footer>
 
-    <script src="src/views/js/script.js" defer></script>
+   <script src="src/views/js/index.js" defer></script>
 </body>
 
 </html>

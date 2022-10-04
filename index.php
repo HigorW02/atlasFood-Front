@@ -17,11 +17,11 @@
             <div class="logo">
                 <img src="src/views/img/logoAtlasFood.jpeg" alt="" class="" height="89px" >
             </div>
-            <a href="src/views/sign.php" class="login"><button>entrar</button></a>
+            <button class="login">
+                <a href="src/views/sign.php">Entrar</a>
+            </button>
         </header>
     </div>
-
-    <hr>
 
     <div class="navBar">
         <div class="navLink">
@@ -30,8 +30,6 @@
             <p><a href="">Sobre nós</a></p>
         </div>
     </div>
-
-    <hr>
     
     <main class="corpo">
         <div class="carrossel">
@@ -43,7 +41,6 @@
                 <img src="src/views/img/carrocel5.webp" alt="">
             </div>
         </div>
-        <hr>
 <!--
         <div class="linha1">
             <div class="card">

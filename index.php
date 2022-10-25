@@ -43,64 +43,52 @@
         </div>
 
         <div class="navigation">
-        <ul>
-            <li class="list active">
-                <a href="#">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="restaurant-outline"></ion-icon></span>
-                    <span class="title">Restaurante</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                    <span class="title">Usuario</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
-                    <span class="title">Mensagens</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></ion-icon></span>
-                    <span class="title">Dados</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></ion-icon></span>
-                    <span class="title">Ajuda</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                    <span class="title">Sair</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" > </script> 
-    <script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js" > </script>
-    
-    <script>
-        const list = document.querySelectorAll('.list');
-        function activeLink(){
-            list.forEach((item) =>
-            item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) =>
-        item.addEventListener('click', activeLink));
-    </script>
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="restaurant-outline"></ion-icon></span>
+                        <span class="title">Restaurante</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Usuario</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                        <span class="title">Mensagens</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Dados</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
 
 <!--
         <div class="linha1">
@@ -155,7 +143,8 @@
         </a>
     </footer>
 -->
-   <script src="src/views/js/index.js" defer></script>
+    <script  type="module"  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
+    <script  nomodule  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="src/views/js/index.js" defer></script>
 </body>
-
 </html>

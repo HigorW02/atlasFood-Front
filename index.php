@@ -11,17 +11,10 @@
 </head>
 
 <body>
-    <div class="cabecalho">
-        <header>
-            <h2 class="titulo">AtlasFood</h2>
-            <div class="logo">
-                <img src="src/views/img/logoAtlasFood.jpeg" alt="" class="" height="89px" >
-            </div>
-            <button class="login">
-                <a href="src/views/sign.php">Entrar</a>
-            </button>
-        </header>
-    </div>
+    <!-- Chamando o código do Cabeçaho da página! -->
+    <?php
+    require("./src/views/templates/cabecalho.html");
+    ?>
     
     <main class="corpo">
         <div class="carrossel">
@@ -34,52 +27,10 @@
             </div>
         </div>
 
-        <div class="navigation">
-            <ul>
-                <li class="list active">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title">Home</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="restaurant-outline"></ion-icon></span>
-                        <span class="title">Restaurante</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-                        <span class="title">Usuario</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
-                        <span class="title">Mensagens</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></ion-icon></span>
-                        <span class="title">Dados</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></ion-icon></span>
-                        <span class="title">Ajuda</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title">Sair</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <!-- Chamando o código do Menu Lateral -->
+        <?php
+        require_once("./src/views/templates/menu.html");
+        ?>
     </main>
 <!--
         <div class="linha1">

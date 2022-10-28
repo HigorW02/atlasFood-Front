@@ -17,7 +17,45 @@
     ?>
     
     <main class="corpo">
-        <div class="carrossel">
+ <div class="content">
+        <div class="slides">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <div class="slide s1">
+                <img src="src/views/img/comida3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="src/views/img/carrocel1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="src/views/img/comida5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="src/views/img/carrocel5.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="src/views/img/comida6.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+        </div>      
+    </div>
+
+
+
+
+
+        <!-- <div class="carrossel">
             <div class="container" id="img">
                 <img src="src/views/img/carrocel1.webp" alt="">
                 <img src="src/views/img/carrocel2.webp" alt="">
@@ -25,7 +63,7 @@
                 <img src="src/views/img/carrocel4.jpg" alt="">
                 <img src="src/views/img/carrocel5.webp" alt="">
             </div>
-        </div>
+        </div> -->
 
         <!-- Chamando o código do Menu Lateral -->
         <?php

@@ -13,194 +13,69 @@ body {
     padding-top: 115px;
     align-items: flex-start;
     min-height: 100vh;
-    background: #f8f6f6;
-}
-
-.navigation{
-    position: absolute;
-    height: 100%;
-    background: #fd7454;
-    width: 70px;
-    box-shadow: 10px 0 0 #fd7454;
-    border-left: 10px solid #fd7454;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.navigation:hover{
-    width: 300px;
-}
-.navigation ul{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 5px;
-    padding-top: 40px;
-}
-.navigation ul li{
-    position: relative;
-    list-style: none;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.navigation ul li a{
-    position: relative;
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-}
-.navigation ul li a .icon{
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 70px;
-}
-.navigation ul li a .icon ion-icon{
-    position: relative;
-    font-size: 1.5rem;
-    z-index: 1;
-}
-.navigation ul li a .title{
-    position: relative;
-    display: block;
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: nowrap;
-}
-.navigation ul li.active{
-    background: #4d4b4b;
-
-}
-.navigation ul li.active a::before{
-
-    content: '';
-    position: absolute;
-    top: -30px;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    background: #fd7454;;
-    border-radius: 50%;
-    box-shadow: 15px 15px 0 #4d4b4b;
-}
-.navigation ul li.active a::after{
-
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    background: #fd7454;;
-    border-radius: 50%;
-    box-shadow: 15px -15px 0 #4d4b4b;
-}
-
-
-.cabecalho {
     background-color: #fd7454;
-    position: absolute;
-    width: 100%;
-    height: 116px;
-    left: 0px;
-    top: 0px;
-
+    /* background: linear-gradient(72deg, #f86b4b 1%, rgb(202, 27, 27) 99%); */
 }
 
-.titulo {
-    position: absolute;
-    width: 172px;
-    height: 61px;
-    left: 53px;
-    top: 5px;
-
-    font-family: 'Coming Soon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    color: #fff;
-}
-
-.logo {
-    position: absolute;
-    width: 110px;
-    height: 89px;
-    left: 688px;
-    top: 8px;
-}
-
-.login {
-    position: absolute;
-    width: 100px;
-    height: 52px;
-    left: 1200px;
-    top: 30px;
-
-    color: #090909;
-
-    font-size: 18px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    transition: all .3s;
-
-}
-
-.login a {
-    padding: 20px;
-}
-
-.navBar {
-    position: absolute;
-    width: 100%;
-    height: 78px;
-    left: 0px;
-    top: 116px;
-    background: #EDE7EB;
-}
-
-.navLink {
-    display: flex;
-    position: absolute;
-    left: 400px;
-    top:-30px;
-    gap: 65px;
-
-
-    font-family: 'Coming Soon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 61px;
-    text-decoration-color: #090909;
-}
-
-.carrossel{
-    display: flex;
-    position: absolute;
-    left: 430px;
-    top: 240px;
-    box-shadow: 2px 2px 4px black;
+/* Carrossel */
+.content{
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
     overflow: hidden;
-    height: 340px;
-    width: 510px;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
-
-.container{
+.carrossel{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
 }
-
-.img{
-    object-fit: cover;
-    height: 340px;
-    width: 550px;
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background-color: #fff;
+}
+input{
+    display: none;
+}
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
 }

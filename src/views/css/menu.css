@@ -1,5 +1,5 @@
 .navigation{
-    position: absolute;
+    position: fixed;
     height: 100%;
     background: #fd7454;
     width: 70px;

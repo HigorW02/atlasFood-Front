@@ -1,11 +1,9 @@
 <?php
 
-$HOST = "127.0.0.1";
-$USER = "root";
-$PASS = "";
-$DB = "atlas";
+require("./config/config.php")
 
-$connection = mysqli_connect($HOST, $USER, $PASS, $DB);
+
+$connection = mysqli_connect($HOST, $USER, $PASSWORD, $DATABASE);
 
 if (!$connection) {
     echo "Falha na conexão, tente novamente mais tarde!";

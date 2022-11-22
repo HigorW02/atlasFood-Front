@@ -1,6 +1,6 @@
 <?php
 
-require("./connection.php");
+require("connection.php");
 session_start();
 
 if (empty($_POST['email']) || empty($_POST['senha'])) {

@@ -1,12 +1,12 @@
 <?php
 
-require("./connection.php");
+require("connection.php");
 session_start();
 
-$nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
-$email = mysqli_real_escape_string($conexao, trim($_POST['email']));
-$senha = mysqli_real_escape_string($conexao, trim($_POST['senha']));
-$confirma_senha = mysqli_real_escape_string($conexao, trim($_POST['confirma_senha']));
+$nome = mysqli_real_escape_string($connection, trim($_POST['nome']));
+$email = mysqli_real_escape_string($connection, trim($_POST['email']));
+$senha = mysqli_real_escape_string($connection, trim($_POST['senha']));
+$confirma_senha = mysqli_real_escape_string($connection, trim($_POST['confirma_senha']));
 
 
 
@@ -20,8 +20,8 @@ if (empty($nome) || empty($email) || empty($senha) || empty($confirma_senha)){
 
 } else {
     $select = "SELECT COUNT(*) AS users FROM usuario WHERE email = '$email'";
-    $query_select = mysqli_query($connection, $query_select);
-    $result = mysqli_fetch_row($query);
+    $query_select = mysqli_query($connection, $select);
+    $result = mysqli_fetch_row($query_select);
 
     if ($result['users'] == 1) {
         $_SESSION['usuario_existe'] = true;

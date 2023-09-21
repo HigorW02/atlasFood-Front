@@ -1,8 +1,3 @@
-<?php
-session_start();
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,22 +41,7 @@ session_destroy();
                         <i class="uil uil-eye-slash showHiddenPass" onclick="show_password()"></i>
                     </div>
                     
-                    <!-- ERRO DE ENVIO DE CAMPO VAZIO-->
-                    <?php
-                        if (isset($_SESSION['campo_vazio'])):
-                        ?>
-                        <div class="Error-message">
-                            <p>Erro: Todos os campos são obrigatórios!</p>
-                        </div>
-                    <?php
-                        endif;
-                        unset($_SESSION['campo_vazio']);
-                    ?>
-
-                    <!-- ERRO DE USUÁRIO INVÁLIDO -->
-                    <?php
-                        if (isset($_SESSION['usuario_invalido'])):
-                    ?>
+                    
                     <div class="Error-message">
                         <p>Erro: Email ou senhas inválidos!</p>
                     </div>

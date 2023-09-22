@@ -15,11 +15,11 @@ header {
    
 }
 footer {
-    background-color: #F43333;
+    background-color: #f00d06;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7vh;
+    height: 10vh;
     width: 100%;
     position: absolute;
 }
@@ -43,13 +43,30 @@ footer {
     color: #fff;
 }
 
-.logo {
+.logo1 {
     position: absolute;
-    width: 110p     x;
+    width: 110px;
     height: 89px;
-    left: 688px;
-    top: 8px;
+    left: 650px;
+    top: 1px;
 } 
 
+.image-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+    margin-top: 5%;
+}
 
+.logo2 {
+    position: absolute;
+    width: 110px;
+    height: 89px;
+    left: 1250px;
+    top: 8px;
+}
 
+.carousel-inner{
+    position: absolute;
+}

@@ -89,10 +89,12 @@ footer {
     max-width: 100px;
     height: auto;
     padding-bottom: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     
 }
 .temas{
-    margin-left: 10px;
+    margin-left: 40px;
     position: absolute;
     
 }

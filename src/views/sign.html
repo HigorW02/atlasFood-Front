@@ -30,7 +30,7 @@
                 <span class="title">Login</span>
 
                 <!-- FORMULÁRIO DE LOGIN -->
-                <form action="../control/validate.php" method="POST">
+                <form action="../views/js       /service.js" method="POST">
                     <div class="input-field">
                         <input type="text" placeholder="Digite seu e-mail" name="email" id="email">
                         <i class="uil uil-envelope-alt icon"></i>
@@ -45,10 +45,6 @@
                     <div class="Error-message">
                         <p>Erro: Email ou senhas inválidos!</p>
                     </div>
-                    <?php
-                        endif;
-                        unset($_SESSION['usuario_invalido']);
-                    ?>
 
                     <div class="button">
                         <input type="submit" value="Entrar">

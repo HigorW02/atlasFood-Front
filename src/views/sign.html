@@ -30,24 +30,24 @@
                 <span class="title">Login</span>
 
                 <!-- FORMULÁRIO DE LOGIN -->
-                <form action="../views/js       /service.js" method="POST">
+                <form id="loginForm">
                     <div class="input-field">
-                        <input type="text" placeholder="Digite seu e-mail" name="email" id="email">
+                        <input type="text" placeholder="Digite seu username" name="username" id="username">
                         <i class="uil uil-envelope-alt icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="senha" placeholder="Digite sua senha" name="senha" id="senha_login">
+                        <input type="password" class="senha" placeholder="Digite sua senha" name="password" id="password">
                         <i class="uil uil-padlock icon"></i>
                         <i class="uil uil-eye-slash showHiddenPass" onclick="show_password()"></i>
                     </div>
                     
                     
-                    <div class="Error-message">
+                    <!-- <div class="Error-message">
                         <p>Erro: Email ou senhas inválidos!</p>
-                    </div>
+                    </div> -->
 
                     <div class="button">
-                        <input type="submit" value="Entrar">
+                        <input type="submit" value="Entrar" id="submit">
                     </div>
                 </form>
 
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-
+    <script src="./js/service.js"></script>
     <script type="text/javascript" src="./js/forms.js"></script>
 </body>
 

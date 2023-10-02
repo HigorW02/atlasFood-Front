@@ -62,28 +62,28 @@
                 <span class="title">Cadastro</span>
 
                 <!-- FORMULÁRIO DE CADASTRO -->
-                <form action="../control/insert.php" method="POST">
+                <form id="signup">
                     <div class="input-field">
-                        <input type="text" placeholder="Digite seu nome" name="nome">
+                        <input type="text" placeholder="Digite seu nome" name="username" id="username">
                         <i class="uil uil-user icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="email" placeholder="Digite seu e-mail" name="email" >
+                        <input type="email" placeholder="Digite seu e-mail" name="email" id="email">
                         <i class="uil uil-envelope-alt icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="senha" placeholder="Digite sua senha" name="senha" id="senha_cadastro">
+                        <input type="password" class="senha" placeholder="Digite sua senha" name="password" id="password">
                         <i class="uil uil-padlock icon"></i>
                     </div>
 
-                    <div class="input-field">
+                    <!-- <div class="input-field">
                         <input type="password" class="senha" placeholder="Confirme sua senha" name="confirma_senha" id="confirma_senha">
                         <i class="uil uil-padlock icon"></i>
                         <i class="uil uil-eye-slash showHiddenPass" onclick="show_password()"></i>
-                    </div>
+                    </div> -->
 
                     <div class="button">
-                        <input type="submit" value="Cadastrar">
+                        <input type="submit" value="Cadastrar" id="submit">
                     </div>
                 </form>
 
@@ -97,6 +97,7 @@
     </div>
 
     <script src="./js/service.js"></script>
+    <script src="./js/signupService.js"></script>
     <script type="text/javascript" src="./js/forms.js"></script>
 </body>
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('loginForm');
+    const form = document.getElementById('signup');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault(); 
@@ -7,15 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(form);
     
       // Cria um objeto com os dados de login
-      const loginData = {
+      const signupData = {
         username: formData.get('username'),
+        email: formData.get('email'),
         password: formData.get('password'),
       };
     
       try {
-        const response = await fetch('http://localhost:3000/api/auth/signin', {
+        const response = await fetch('http://localhost:3000/api/auth/signup', {
           method: 'POST',
-          body: JSON.stringify(loginData), // Envie os dados como JSON
+          body: JSON.stringify(signupData), // Envie os dados como JSON
           headers: {
             'Content-Type': 'application/json', 
           },
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!response.ok ) {
           throw new Error('Erro na resposta do servidor');
         } else{
-          window.location.href = "../../index.html";
+          window.location.href = "./sign.html";
         }
     
       } catch (error) {
@@ -34,5 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
       
     });
   });
-  
   

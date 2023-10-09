@@ -1,19 +1,6 @@
-// const imgs = document.getElementById("img");
-// const img = document.querySelectorAll("#img img");
+
 const list = document.querySelectorAll('.list');
 
-
-// let idx = 0;
-
-// function carrossel() {
-//     idx++;
-
-//     if (idx > img.length - 1) {
-//         idx = 0;
-//     }
-
-//     imgs.style.transform = `translateX(${-idx *510}px)`;
-// }
 
 function activeLink(){
     list.forEach((item) =>
@@ -24,4 +11,8 @@ list.forEach((item) =>
 item.addEventListener('click', activeLink));
 
 
-// setInterval(carrossel, 3000);
+if (autenticacaoBemSucedida) {
+    const username = 'NomeDoUsuario'; // Substitua pelo nome de usuário real obtido após a autenticação
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = username;
+  }

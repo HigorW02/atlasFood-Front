@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>Cadastro de Empresas</h1>
-    <form action="#" method="POST">
+    <form id="companyForm">
         <label for="cnpj">CNPJ:</label>
-        <input type="text" id="cnpj" name="cnpj" required>
+        <input type="text" id="cnpj" name="cnpj"  required >
         <br>
 
         <label for="nome">Nome da Empresa:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" id="nomeEmpresa" name="nomeEmpresa" required>
         <br>
 
         <label for="email">Email:</label>
@@ -29,7 +29,9 @@
         <input type="endereco" id="endereco" name="endereco" required>
         <br>
 
-        <input type="submit" value="Cadastra Empresas">
+        <input type="submit" value="Cadastra Empresa" id="submit">
     </form>
+
+    <script src="/src/views/js/companyService.js"></script>
 </body>
 </html>

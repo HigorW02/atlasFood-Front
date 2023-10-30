@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/views/css/index.css">
+    <link rel="stylesheet" href="./src/views/css/btnTopo.css">
+    <link rel="shortcut icon" href="./src/views/img/logoAtlasFood.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>AtlasFood-Inicio</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">    
+            <h2>AtlasFood</h2>
+        </div>
+        <div class="logo1">
+            <img src="./src/views/img/logo.png" alt="" height="75">
+        </div>
+        <div class="usuario">
+            <div class="usuario-botao-entrar">
+                <a href="./src/views/sign.html" class="btn-sigin"><i class=" fa fa-sign-in" aria-hidden="true"></i> </a>
+            </div>
+            <div class="usuario-carrinho">
+                <a href="#" class="btn-cart" id="cart-button" onclick="modal_carrinho('abrir')">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b><span id="cart-item-count"></span></b>
+                </a> 
+            </div>           
+        </div>
+    </header>
+
+    <nav id="inicio"  class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#inicio" onclick="ativa_menu(this)">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos" onclick="ativa_menu(this)">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#restaurantes" onclick="ativa_menu(this)">Restaurantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre" onclick="ativa_menu(this)">Sobre nós</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" style="flex: 1; margin-left: 20px;">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button  class="btn btn-outline-danger" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="espacamento">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./src/views/img/Apenas.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./src/views/img/Design sem nome.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./src/views/img/BURG KG.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="espacamento_itens">
+            <div id="produtos" class="lista_produtos">
+                <h3>Seja feliz com seu lanche!</h3>
+                <div class="image-grid-produto" id="produto-grid">
+                    <!-- lista de  -->
+                </div>
+            </div>
+
+            <div id="restaurantes" class="lista_parceiros">
+                <h3>Lista de parceiros</h3>
+                <div class="image-grid" id="parceiro-grid">
+                    <!-- lista de parceiros -->
+                </div>
+            </div>
+        </div> 
+        
+        <section id="sobre" class="sobre-nos">
+            <div class="container">
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <h2>Sobre Nós</h2>
+                        <p>
+                            Somos uma equipe apaixonada por comida e inovação. Nossa missão é tornar a experiência de pedir comida rápida e deliciosa mais conveniente do que nunca. Com uma variedade de restaurantes e opções de entrega, estamos comprometidos em satisfazer o seu desejo de comida de qualidade no conforto da sua casa. Deixe-nos cuidar da sua próxima refeição.
+                        </p>
+                        <div class="contact-info">
+                            <p><strong>Entre em Contato:</strong></p>
+                            <p>Email: contato@atlasfood.com</p>
+                            <p>Telefone: (11) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="sobre-logo">
+                        <img src="./src/views/img/logo.png" alt="AtlasFood Logo">
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer class="footer">
+            <p>&copy; 2023 AtlasFood</p>
+        </footer>
+    </div>
+
+    <!-- modal -->
+    <div class="cart-modal" id="cart-modal">
+        <a href="" id="close-cart" onclick="modal_carrinho('fecha')"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <div class="cart-content">
+            <strong>Seus pedidos</strong>
+            <div class="endereco">
+                <p>Endereço</p>
+                <div class="endereco_rua">
+                    <div class="rua">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <b>Rua. Regina pontes</b>
+                    </div>
+                    <div class="endereco_alterar">
+                        <a href="">Alterar</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carrinho">
+                <strong>Carrinho</strong>
+                <div class="carrinho-itens">
+                    <div id="cart-items">
+                        <div class="carrinho_vazio">
+                            <i class="fa fa-frown-o" aria-hidden="true"></i>
+                            <p>Seu carrinho ainda não tem itens.</p>
+                        </div>                
+                    </div>
+                </div>
+                <div class="carrinho-total">
+                    <div class="carrinho-totalizador">
+                        <span>
+                            <b>Total a pagar</b>
+                            <b><b class="simbolo-dolar">$</b> 0,00</b>
+                        </span>
+                    </div>
+                    <div class="carrinho-total-botao">
+                        <a href="#" class="desativado btn-pagar" id="pagament-button" onclick="modal_pagamento('abrir')"><i class="fa fa-money"> Realizar pagamento</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="pagament-modal" id="pagament-modal">
+        <div class="pagament-container">
+            <div class="bar-title">
+                <a href="" id="close-pagament" onclick="modal_pagamento('fecha')"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            </div>
+            <div class="pagament-content">
+                <strong>Pagamento</strong>
+                <div class="forma_pagamento">
+                    <p><i class="fa fa-money" aria-hidden="true"></i> Forma de pagamento</p>                
+                </div>
+                <div class="container_pagamento">
+                    <div class="payment-selector">
+                        <div class="payment-option" id="dinheiro">
+                            <i class="fa fa-money"></i> Dinheiro
+                        </div>
+                        <div class="payment-option" id="cartao">
+                            <i class="fa fa-credit-card"></i> Cartão
+                        </div>
+                        <div class="payment-option" id="pix">
+                            <i class="fa fa-qrcode"></i> Pix
+                        </div>
+                    </div>
+                    
+                    <div class="payment-content">
+                        <div id="dinheiro-content" class="hidden">
+                            <p>Informe o valor em dinheiro:</p>
+                            <input type="text" class="payment-input" placeholder="Digite o valor">
+                        </div>
+                        <div id="cartao-content" class="hidden">
+                            <p>Informe os detalhes do cartão:</p>
+                            <input type="text" class="payment-input" placeholder="Número do cartão">
+                            <input type="text" class="payment-input" placeholder="Data de validade">
+                            <input type="text" class="payment-input" placeholder="Código de segurança">
+                        </div>
+                        <div id="pix-content" class="hidden">
+                            <p>Use o QR Code abaixo pague com Pix:</p>
+                            <img src="./src/views/img/qrcode.jpg" alt="QR Code Pix">
+                        </div>
+                    </div>
+                </div>                
+                <div class="sub-total">
+                    <div class="pagament-totalizador">
+                        <span>
+                            <b>Total a pagar</b>
+                            <b><b class="simbolo-dolar">$</b> 0,00</b>
+                        </span>
+                    </div>
+                    <div class="carrinho-total-botao">
+                        <a href="#" class="btn-receber" id="pagar-button"><i class="fa fa-usd"> Receber</i></a>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top" title="Voltar ao Topo">^</button>
+    <!-- modal -->
+
+    <script src="./src/views/js/listaProdutos.js"></script>
+    <script src="./src/views/js/listaParceiros.js"></script>
+    <script src="./src/views/js/menu.js"></script>
+    <script src="./src/views/js/btnTopo.js"></script>
+    <script src="./src/views/js/modal.js"></script>
+    <script src="./src/views/js/carrinho.js"></script>
+    <script src="./src/views/js/pagament.js"></script>
+    <script src="./src/views/js/service.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

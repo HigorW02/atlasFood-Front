@@ -91,8 +91,8 @@ function atualizarModalCarrinho() {
                             </div>
                         </div>
                         <div class="item-carrinho-valores">
-                            <span class="item-carrinho-preco"><b>$</b> ${produto.valor.toFixed(2)}</span>
-                            <span class="item-carrinho-total"><b class="simbolo-dolar">$</b> ${produto.total.toFixed(2)}</span>
+                            <span class="item-carrinho-preco"><b>R$</b> ${produto.valor.toFixed(2)}</span>
+                            <span class="item-carrinho-total"><b class="simbolo-dolar">R$</b> ${produto.total.toFixed(2)}</span>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function atualizarTotalCarrinho() {
     carrinhoTotalizador.innerHTML = `
     <span class="item-carrinho-total">
         <b>Total a pagar</b>
-        <b><b class="simbolo-dolar">$</b> ${totalCarrinho.toFixed(2)}</b> 
+        <b><b class="simbolo-dolar">R$</b> ${totalCarrinho.toFixed(2)}</b> 
     </span>`;
 
     const pagamentTotalizador = document.querySelector('.pagament-totalizador');
@@ -117,7 +117,7 @@ function atualizarTotalCarrinho() {
     pagamentTotalizador.innerHTML = `
     <span class="item-carrinho-total">
         <b>Total a pagar</b>
-        <b><b class="simbolo-dolar">$</b> ${totalCarrinho.toFixed(2)}</b> 
+        <b><b class="simbolo-dolar">R$</b> ${totalCarrinho.toFixed(2)}</b> 
     </span>`;
 }
 

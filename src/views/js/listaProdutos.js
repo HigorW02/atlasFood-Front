@@ -1,3 +1,4 @@
+
 var produtosJSON = [
     {
         "id": 1,
@@ -19,7 +20,7 @@ var produtosJSON = [
         "valor": 14.99,
         "desconto_percentual": 2,
         "estrelas": 4.5,
-        "favorito": false,
+        "favorito": true,
         "imagem": "./src/views/produtos/pizza.jpg",
         "itens": [
             { nome: "Molho de Tomate", quantidade: "150g" },
@@ -175,7 +176,7 @@ var produtosJSON = [
 ];
 
 var whatsappJson = {
-    "celular": "8194871780",
+    "celular": "989940869",
     "mensagem": "Ol%C3%A1%20quero%20comprar%20o%20produto"
 }
 
@@ -185,11 +186,26 @@ function createProductCard(product) {
     productCard.className = 'product-card';
 
     productCard.innerHTML = `
-        <div class="product-card-rating">
-            <div class="product-card-desc">
-                <p class="product-card-desc-title">${product.desconto_percentual}% Off</p>
-            </div>
-            <i class="fa fa-heart favorite-icon"></i>
+    <div class="product-card-rating">
+    <div class="product-card-desc">
+        <p class="product-card-desc-title">${product.desconto_percentual}% Off</p>
+    </div>
+
+    <style>
+        .heart-icon {
+            cursor: pointer;
+            color: ${product.favorito ? 'red' : '#ccc'}; /* Defina a cor com base no estado do favorito */
+        }
+    </style>
+
+    <div class="heart-icon" onclick="toggleFavorite(${product.id})">
+        &#10084; <!-- Código HTML para um coração -->
+    </div>
+
+</div>
+        
+          
+        
         </div>
         <img src="${product.imagem}" alt="${product.descricao}">
         <div class="star-rating">${getStarRatingHTML(product.estrelas)}</div>
@@ -197,7 +213,7 @@ function createProductCard(product) {
             <div class="product-price-title">
                 <h3 class="product-name">${product.descricao}</h3>
                 <div class="product-price-div">
-                    <strong class="product-price-dolar">$</strong>
+                    <strong class="product-price-dolar">R$</strong>
                     <strong class="product-price"> ${product.valor.toFixed(2)}</strong>
                 </div>
             </div>
@@ -215,6 +231,33 @@ function createProductCard(product) {
     `;
 
     return productCard;
+}
+let favoritos = [];
+
+function toggleFavorite(productId) {
+    const product = produtosJSON.find(p => p.id === productId);
+    const index = favoritos.indexOf(product.id);
+
+    if (index !== -1) {
+        // Remova dos favoritos
+        favoritos.splice(index, 1);
+    } else {
+        // Adicione aos favoritos
+        favoritos.push(product.id);
+    }
+
+    updateFavoriteState(); // Atualize o estado de favoritos para todos os produtos
+}
+
+function updateFavoriteState() {
+    const heartIcons = document.querySelectorAll('.heart-icon');
+
+    produtosJSON.forEach((product, index) => {
+        const heartIcon = heartIcons[index];
+        const isFavorite = favoritos.includes(product.id);
+
+        heartIcon.style.color = isFavorite ? 'red' : '#ccc';
+    });
 }
 
 function getStarRatingHTML(rating) {

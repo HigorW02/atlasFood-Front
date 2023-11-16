@@ -1,31 +1,38 @@
 var parceirosJSON = [
     {
         "nome": "Crocants Pastelaria",
-        "imagem": "./src/views/img2/logo_v1628362244.jpeg"
+        "imagem": "./src/views/img2/logo_v1628362244.jpeg",
+        "link": "./parceiros/CrocantsPastelaria.html"
     },
     {
         "nome": "Mc Donalds",
-        "imagem": "./src/views/img2/100.png"
+        "imagem": "./src/views/img2/100.png",
+        "link": "./parceiros/mcdonalds.html"
     },
     {
         "nome": "Giraffas",
-        "imagem": "./src/views/img2/101.png"
+        "imagem": "./src/views/img2/101.png",
+        "link": "./parceiros/giraffas.html"
     },
     {
         "nome": "Bobs",
-        "imagem": "./src/views/img2/102.png"
+        "imagem": "./src/views/img2/102.png",
+        "link": "./parceiros/Bobs.html"
     },
     {
         "nome": "Boi e Brasa",
-        "imagem": "./src/views/img2/103.jpg"
+        "imagem": "./src/views/img2/103.jpg",
+        "link": "./parceiros/Boi_e_Brasa.html"
     },
     {
         "nome": "Rei das Coxinhas",
-        "imagem": "./src/views/img2/104.png"
+        "imagem": "./src/views/img2/104.png",
+        "link": "./parceiros/Rei_das_Coxinhas.html"
     },
     {
         "nome": "Pai e Filho",
-        "imagem": "./src/views/img2/60.jpg"
+        "imagem": "./src/views/img2/60.jpg",
+        "link": "./parceiros/Pai_e_Filho.html"
     }
 ];
 
@@ -42,7 +49,7 @@ function criarCardParceiro(parceiro) {
     card.className = 'small-image';
 
     const link = document.createElement('a');
-    link.href = parceiro.imagem;
+    link.href = parceiro.link;
     link.target = '_blank';
 
     const imagem = document.createElement('img');
